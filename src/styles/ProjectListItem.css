@@ -1,0 +1,59 @@
+.project-list-item {
+  display: flex;
+  align-items: center; /* Align all items vertically */
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #1e1e1e;
+  color: white;
+  height: 72px; /* Fixed height for consistency */
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-details {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.status-active {
+  color: #4CAF50; /* Green color for active status */
+}
+
+.status-development {
+  color: #FFC107; /* Yellow color for development status */
+}
+
+.status-inactive {
+  color: #9E9E9E; /* Gray color for inactive status */
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center; /* Ensure buttons are centered */
+  gap: 8px;
+  height: 100%; /* Match parent height */
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: fit-content; /* Proper button height */
+}
+
+.edit-btn {
+  color: #4a9eff;
+  background: transparent;
+}
+
+.delete-btn {
+  color: #ff4a4a;
+  background: transparent;
+} 

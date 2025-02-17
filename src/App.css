@@ -1,0 +1,143 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
+  color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #FFFFFF, #E0E0E0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #808080;
+  margin-bottom: 2rem;
+}
+
+/* Remove the old button styles */
+.button-container {
+  display: none;
+}
+
+.cards-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.cards-slider {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 0;
+  animation: slideCards 35s linear infinite;
+  will-change: transform;
+}
+
+.cards-slider:hover {
+  animation-play-state: paused;
+}
+
+/* Double the cards for seamless loop */
+.cards-slider-content {
+  display: flex;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+@keyframes slideCards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Remove the grid styles */
+@media (min-width: 1200px) {
+  .cards-container {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .cards-container {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .cards-container {
+    padding: 0 1.5rem;
+  }
+}
+
+/* Add navigation buttons */
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.slider-button {
+  background: rgba(32, 32, 32, 0.8);
+  border: none;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.slider-button svg {
+  width: 28px;
+  height: 28px;
+}
+
+.slider-button:hover {
+  background: rgba(48, 48, 48, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Update card width in Card.css */
+.card {
+  width: 100%;  /* Instead of fixed width */
+  max-width: 350px;
+  /* ... rest of the card styles ... */
+} 
