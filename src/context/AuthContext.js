@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
     {
       username: 'deta@mulhaq.org',
       password: 'admin123',
-      role: 'Admin'
+      role: 'Super Admin'
     }
   ];
 
