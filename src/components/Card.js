@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ title, description, imageUrl, projectUrl }) => {
+const Card = ({ title, description, imageUrl, projectUrl, author }) => {
   const handleCardClick = () => {
     if (projectUrl) {
       window.open(projectUrl, '_blank');
@@ -32,6 +32,7 @@ const Card = ({ title, description, imageUrl, projectUrl }) => {
       <div className="card-content">
         <h3>{title}</h3>
         <p>{description}</p>
+        <p className="card-author">By <span>{author || 'Unknown Author'}</span></p>
       </div>
     </a>
   );

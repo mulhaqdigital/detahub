@@ -66,6 +66,7 @@ const AdminDashboard = () => {
     category: 'web-app',
     imageUrl: '',
     projectUrl: '',
+    author: '',
     status: 'active',
     created: new Date().toLocaleDateString('en-GB', {
       day: '2-digit',
@@ -148,6 +149,7 @@ const AdminDashboard = () => {
         category: 'web-app',
         imageUrl: '',
         projectUrl: '',
+        author: '',
         status: 'active',
         created: new Date().toLocaleDateString('en-GB', {
           day: '2-digit',
@@ -169,6 +171,7 @@ const AdminDashboard = () => {
       category: 'web-app',
       imageUrl: '',
       projectUrl: '',
+      author: '',
       status: 'active',
       created: new Date().toLocaleDateString('en-GB', {
         day: '2-digit',
@@ -188,6 +191,7 @@ const AdminDashboard = () => {
               <thead>
                 <tr>
                   <th>Project</th>
+                  <th>Author</th>
                   <th>Category</th>
                   <th>Status</th>
                   <th>Created</th>
@@ -207,6 +211,9 @@ const AdminDashboard = () => {
                         />
                         <span className="project-title">{project.title}</span>
                       </div>
+                    </td>
+                    <td>
+                      <span className="project-author">{project.author}</span>
                     </td>
                     <td>
                       <span className="project-category">{project.category}</span>
@@ -253,6 +260,7 @@ const AdminDashboard = () => {
                 <div className="project-card-content">
                   <h3>{project.title}</h3>
                   <p className="project-description">{project.description}</p>
+                  <p className="project-author">Created by {project.author}</p>
                   <div className="project-meta">
                     <span className="project-category">{project.category}</span>
                     <span className="project-views">{project.views} views</span>
@@ -407,6 +415,18 @@ const AdminDashboard = () => {
                     value={projectForm.projectUrl}
                     onChange={handleInputChange}
                     required
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label>Author</label>
+                  <input
+                    type="text"
+                    name="author"
+                    value={projectForm.author}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="Enter author name"
                   />
                 </div>
 

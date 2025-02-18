@@ -64,4 +64,24 @@
 .card-image.error {
     object-fit: contain;
     padding: 1rem;
+}
+
+.card-author {
+    color: #9CA3AF;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+    opacity: 1;
+    display: block;
+}
+
+.card-author span {
+    font-weight: 700;
+    color: #E0E0E0;
+}
+
+.author {
+    color: #666;
+    font-style: italic;
+    margin: 8px 0;
 } 

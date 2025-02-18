@@ -65,6 +65,7 @@ const HomePage = () => {
                 description={project.description}
                 imageUrl={project.imageUrl || '/logo192.png'}
                 projectUrl={project.projectUrl}
+                author={project.author}
               />
             ))}
           </div>

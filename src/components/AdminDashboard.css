@@ -697,4 +697,16 @@
 
 @keyframes pulse {
   /* ... */
+}
+
+.project-author {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.projects-list .project-author {
+  color: #9CA3AF;
+  font-style: italic;
 } 
