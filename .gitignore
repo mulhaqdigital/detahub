@@ -25,3 +25,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+ADMIN_USERNAME=your_admin_username
+ADMIN_PASSWORD=your_admin_password
