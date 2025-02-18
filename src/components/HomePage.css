@@ -1,0 +1,111 @@
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 0 20px;
+}
+
+.cards-container {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth; /* Smooth scroll for desktop */
+}
+
+.cards-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.card-wrapper {
+  flex: 0 0 300px;
+  min-width: 300px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.slider-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #E0E0E0;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.slider-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.slider-button:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 0 10px;
+  }
+
+  .cards-container {
+    overflow-x: auto; /* Enable horizontal scrolling on mobile */
+    scroll-behavior: auto; /* Disable smooth scroll for mobile */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    scrollbar-width: none; /* Hide scrollbar on Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar on IE/Edge */
+  }
+
+  .cards-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on Chrome/Safari */
+  }
+
+  .cards-wrapper {
+    padding: 20px 10px; /* Add padding for better mobile experience */
+  }
+
+  .card-wrapper {
+    flex: 0 0 280px;
+    min-width: 280px;
+  }
+
+  .slider-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 6px;
+  }
+
+  /* Hide slider buttons on mobile */
+  .slider-controls {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-wrapper {
+    flex: 0 0 260px;
+    min-width: 260px;
+  }
+
+  .cards-wrapper {
+    padding: 20px 5px;
+  }
+} 
